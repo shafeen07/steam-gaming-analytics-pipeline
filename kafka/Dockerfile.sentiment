@@ -1,0 +1,28 @@
+FROM python:3.9-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    python3-dev \
+    libpq-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY requirements-sentiment.txt .
+RUN pip install --no-cache-dir -r requirements-sentiment.txt
+
+# Download and cache the sentiment model during build
+RUN python -c "from transformers import AutoTokenizer, AutoModelForSequenceClassification; \
+    AutoTokenizer.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment-latest'); \
+    AutoModelForSequenceClassification.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment-latest')"
+
+COPY . .
+
+# Create non-root user for security
+RUN useradd -m -u 1000 sentiment_user && chown -R sentiment_user:sentiment_user /app
+USER sentiment_user
+
+CMD ["python", "sentiment_consumer.py"]

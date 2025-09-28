@@ -1,0 +1,15 @@
+# Original dependencies
+kafka-python==2.0.2
+psycopg2-binary==2.9.7
+requests==2.31.0
+python-dateutil==2.8.2
+
+# New sentiment analysis dependencies
+openai==0.28.0
+anthropic==0.3.11
+transformers==4.35.0
+torch==2.1.0
+numpy==1.24.3
+pandas==2.1.0
+python-dotenv==1.0.0
+prometheus-client==0.17.1
