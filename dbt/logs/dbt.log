@@ -1,0 +1,30 @@
+[0m16:15:49.154187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000157BC498440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000157BA001950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000157BD47BD90>]}
+
+
+============================== 16:15:49.164472 | c0b5bf1b-2592-4e55-9f92-7204292cc1f6 ==============================
+[0m16:15:49.164472 [info ] [MainThread]: Running with dbt=1.10.13
+[0m16:15:49.165328 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'empty': 'None', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'profiles_dir': 'C:\\Users\\shafe\\.dbt', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'logs', 'introspect': 'True', 'invocation_command': 'dbt init .', 'fail_fast': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'use_experimental_parser': 'False'}
+[0m16:15:49.198608 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\shafe\.dbt
+[0m16:16:39.391150 [debug] [MainThread]: Starter project path: C:\Users\shafe\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\include\starter_project
+[0m16:16:39.451869 [info ] [MainThread]: 
+Your new dbt project "steam_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:16:39.452441 [info ] [MainThread]: Setting up your profile.
+[0m16:18:09.645276 [info ] [MainThread]: Profile steam_analytics written to C:\Users\shafe\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:18:09.647216 [debug] [MainThread]: Command `dbt init` succeeded at 16:18:09.646945 after 140.68 seconds
+[0m16:18:09.647784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000157BE959E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000157BE504EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000157BD23F9B0>]}
+[0m16:18:09.648305 [debug] [MainThread]: Flushing usage events
+[0m16:18:09.857328 [debug] [MainThread]: An error was encountered while trying to flush usage events

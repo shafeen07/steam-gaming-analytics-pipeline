@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    database: airflow
+    schema: public
+    tables:
+      - name: steam_player_tracking
+      - name: steam_review_tracking
+      - name: steam_price_tracking
+
+models:
+  - name: stg_player_tracking
+    description: "Cleaned player tracking data with time dimensions"
